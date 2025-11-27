@@ -64,9 +64,31 @@ Sitio web oficial de Nefsis, plataforma de acompañamiento holístico para human
 
 ## 🚀 Deployment
 
-El sitio se despliega automáticamente en GitHub Pages cuando se hace push a la rama `main`.
+### Configuración de GitHub Pages
+
+1. **Ve a Settings > Pages** en tu repositorio de GitHub
+2. **Source:** Selecciona "GitHub Actions"
+3. **Branch:** Debe estar configurado para usar GitHub Actions
+
+### Deployment Automático
+
+El sitio se despliega automáticamente cuando:
+- Se hace push a la rama `main`  
+- GitHub Actions ejecuta el workflow de build y deploy
 
 **URL del sitio:** `https://silvanatrabalon.github.io/nefsis`
+
+### Deployment Manual (alternativa)
+
+Si hay problemas con el workflow automático:
+
+```bash
+# 1. Crear el build
+npm run build
+
+# 2. Deploy manual con gh-pages
+npm run deploy
+```
 
 ### Comandos disponibles:
 
